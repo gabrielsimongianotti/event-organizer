@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, Text, Image, } from 'react-native';
+import { TouchableOpacity, Text, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { graphql } from "react-apollo";
-import gql from "graphql-tag"
 import Erro from "../../assets/image/error.png"
 import styles from './Style.js';
 
@@ -20,7 +18,7 @@ class Card extends Component {
     render() {
 
         return (
-            <TouchableOpacity disabled={true} style={styles.card} onPress={()=>console.log("opacity: 0.3,")}>
+            <TouchableOpacity activeOpacity={1} style={styles.card} onPress={() => { this.props.onPress() }}>
                 <Image
                     style={styles.image}
                     source={this.state.error == false ? { uri: this.props.image } : Erro}
@@ -37,7 +35,8 @@ class Card extends Component {
 Card.propTypes = {
     image: PropTypes.string,
     label: PropTypes.string,
-    segment: PropTypes.string
+    segment: PropTypes.string,
+    onPress: PropTypes.func,
 }
 
 export default Card

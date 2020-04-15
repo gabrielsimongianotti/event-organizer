@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     card: {
+        // opacity: .8,
         width: 350,
         height: "auto",
         borderRadius: 5,

@@ -10,6 +10,8 @@ export default StyleSheet.create({
     },
     inputText: {
         margin: 7,
+        marginLeft:20,
+        marginRight:20,
         alignContent: 'space-around',
     },
     Text: {
