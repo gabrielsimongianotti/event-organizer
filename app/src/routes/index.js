@@ -24,7 +24,7 @@ export default class Routes extends Component {
                     key="login"
                     component={Login}
                     type="reset"
-                    initial={dataValid}
+                    initial={!dataValid}
                     hideNavBar={true}
                 />
 
@@ -32,7 +32,7 @@ export default class Routes extends Component {
                     key="home"
                     component={Home}
                     type="reset"
-                    initial={!dataValid}
+                    initial={dataValid}
                     hideNavBar={true}
                 />
 

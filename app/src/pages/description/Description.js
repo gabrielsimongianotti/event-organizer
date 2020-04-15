@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView, View, Image, Text } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import AsyncStorage from '@react-native-community/async-storage';
 
 import Erro from "../../assets/image/error.png"
 import Star from "../../components/star/Star"

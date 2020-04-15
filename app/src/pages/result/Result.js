@@ -48,7 +48,6 @@ export default class Result extends Component {
         "proposal": 2.5
       }
     ]
-    console.log(data)
     return (
       <Backgroud goBack={() => { Actions.home() }}>
 
@@ -71,7 +70,7 @@ export default class Result extends Component {
                   <Text style={styles.textData}>Nome: {value.name}</Text>
                   <Text style={styles.textData}>{value.Segment.name}</Text>
                   <Text style={styles.textStar}>{value.proposal}/5</Text>
-                  <Star disabled={true} rating={value.proposal} size={27} onStarRatingPress={event => console.log("star", event)} />
+                  <Star disabled={true} rating={value.proposal} size={27} />
                 </View>
               </View>
             ))}
@@ -93,7 +92,7 @@ export default class Result extends Component {
                   <Text style={styles.textData}>Nome: {value.name}</Text>
                   <Text style={styles.textData}>{value.Segment.name}</Text>
                   <Text style={styles.textStar}>{value.pitch}/5</Text>
-                  <Star disabled={true} rating={value.pitch} size={30} onStarRatingPress={event => console.log("star", event)} />
+                  <Star disabled={true} rating={value.pitch} size={30}  />
                 </View>
               </View>
             ))}
