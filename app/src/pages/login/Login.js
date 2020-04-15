@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, TouchableHighlight } from 'react-native';
-import { Router, Scene, Actions } from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 import InputValue from "../../components/input/Input"
 import Button from "../../components/button/Button"
 import Backgroud from "../../components/background/Backgroud"
@@ -9,20 +9,20 @@ import styles from './Style';
 export default class Login extends Component {
   render() {
     return (
-      <Backgroud>
+      <Backgroud >
 
         <View style={styles.login}>
+
           <InputValue
             label="Login"
             name="login"
             onChange={(nameState, valueInput) => console.log(nameState, valueInput)}
-          // value={this.state.calories}
           />
           <InputValue
             label="Senha"
             name="password"
             onChange={(nameState, valueInput) => console.log(nameState, valueInput)}
-          // value={this.state.calories}
+            password
           />
           <TouchableHighlight onPress={() => {
             Actions.home();
@@ -34,7 +34,9 @@ export default class Login extends Component {
           }} underlayColor="transparent">
             <Button text={"Cadastrar-se"} />
           </TouchableHighlight>
+          {/* </View> */}
         </View>
+
       </Backgroud>
     )
   }
