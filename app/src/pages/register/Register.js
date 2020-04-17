@@ -24,7 +24,7 @@ export default class Register extends Component {
               onChange={(nameState, valueInput) => console.log(nameState, valueInput)}
             />
             <InputValue
-              label="Digite a nova senha"
+              label="Digite a senha novamente"
               name="password"
               onChange={(nameState, valueInput) => console.log(nameState, valueInput)}
             />
